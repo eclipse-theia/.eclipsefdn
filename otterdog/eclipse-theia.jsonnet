@@ -404,6 +404,9 @@ orgs.newOrg('eclipse-theia') {
         orgs.newRepoSecret('GH_ACTION_TOKEN') {
           value: "********",
         },
+        orgs.newRepoSecret('TOKEN') {
+          value: "pass:bots/ecd.theia/github.com/api-token-website",
+       },
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
