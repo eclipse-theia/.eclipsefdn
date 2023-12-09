@@ -250,7 +250,6 @@ orgs.newOrg('eclipse-theia') {
             "any:DCO",
             "any:Gitpod",
             "any:continuous-integration/travis-ci",
-            "any:eclipsefdn/eca"
           ],
           requires_strict_status_checks: true,
         },
