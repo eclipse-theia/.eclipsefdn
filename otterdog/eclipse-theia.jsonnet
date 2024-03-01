@@ -172,40 +172,6 @@ orgs.newOrg('eclipse-theia') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://hooks.slack.com/services/T0KEWVAQN/B4B9ZA3JM/*') {
-          content_type: "json",
-          events+: [
-            "commit_comment",
-            "create",
-            "delete",
-            "deployment_status",
-            "fork",
-            "issue_comment",
-            "issues",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "push",
-            "release"
-          ],
-        },
-        orgs.newRepoWebhook('https://hooks.slack.com/services/T4EHBND17/B4F5VTW0K/*') {
-          content_type: "json",
-          events+: [
-            "commit_comment",
-            "create",
-            "delete",
-            "deployment_status",
-            "fork",
-            "issue_comment",
-            "issues",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "push",
-            "release"
-          ],
-        },
         orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/5cc039a06ed44dc5') {
           content_type: "json",
           events+: [
