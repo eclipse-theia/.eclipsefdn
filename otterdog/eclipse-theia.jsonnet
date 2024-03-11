@@ -253,6 +253,9 @@ orgs.newOrg('eclipse-theia') {
         default_workflow_permissions: "write",
       },
       secrets: [
+        orgs.newRepoSecret('DASH_LICENSES_PAT') {
+          value: "********",
+        },
         orgs.newRepoSecret('DOCKERHUB_TOKEN') {
           value: "********",
         },
@@ -314,7 +317,6 @@ orgs.newOrg('eclipse-theia') {
     orgs.newRepo('theia-generator-plugin') {
       archived: true,
       default_branch: "master",
-      dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -338,7 +340,6 @@ orgs.newOrg('eclipse-theia') {
     orgs.newRepo('theia-plugin-packager') {
       archived: true,
       default_branch: "master",
-      dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -445,7 +446,6 @@ orgs.newOrg('eclipse-theia') {
     orgs.newRepo('theia-yeoman-plugin') {
       archived: true,
       default_branch: "master",
-      dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
