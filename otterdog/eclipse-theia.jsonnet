@@ -2,10 +2,8 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-theia') {
   settings+: {
-    dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse Theia™",
-    packages_containers_internal: false,
     readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
@@ -244,8 +242,8 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      description: "Eclipse Theia Blueprint is a template for building desktop-based products based on the Eclipse Theia platform, as well as to showcase Eclipse Theia capabilities. It is made up of a subset of existing Eclipse Theia features and extensions and can be easily downloaded and installed on all major operating system platforms.",
-      homepage: "https://theia-ide.org/docs/blueprint_download",
+      description: "The Eclipse IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the Theia platform. The Theia IDE is available as a downloadable desktop application. You can also try the latest version of the Theia IDE online. For more details, see the Readme below.",
+      homepage: "https://theia-ide.org/#theiaide",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
