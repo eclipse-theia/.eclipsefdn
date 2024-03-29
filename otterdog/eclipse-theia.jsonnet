@@ -378,9 +378,7 @@ orgs.newOrg('eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Theia's Website",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       has_discussions: true,
       homepage: "https://theia-ide.org/",
       secret_scanning: "disabled",
@@ -424,6 +422,26 @@ orgs.newOrg('eclipse-theia') {
           branch_policies+: [
             "gh-pages",
             "master"
+          ],
+          deployment_branch_policy: "selected",
+        },
+        orgs.newEnvironment('pull-request-preview'),
+      ],
+    },
+    orgs.newRepo('theia-website-previews') {
+      default_branch: "previews",
+      description: "Hosting PR previews for theia-website",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "previews",
+      gh_pages_source_path: "/",
+      has_issues: false,
+      has_projects: false,
+      has_wiki: false,
+      web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "previews"
           ],
           deployment_branch_policy: "selected",
         },
