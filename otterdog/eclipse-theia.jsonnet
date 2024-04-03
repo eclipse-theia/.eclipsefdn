@@ -410,6 +410,9 @@ orgs.newOrg('eclipse-theia') {
         },
       ],
       secrets: [
+        orgs.newRepoSecret('DEPLOY_PREVIEW_TOKEN') {
+          value: "pass:bots/ecd.theia/github.com/preview-token",
+        },
         orgs.newRepoSecret('GH_ACTION_TOKEN') {
           value: "********",
         },
