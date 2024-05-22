@@ -15,8 +15,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "cryptodetector",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -27,8 +25,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -42,8 +38,6 @@ orgs.newOrg('eclipse-theia') {
       dependabot_security_updates_enabled: true,
       description: "dugite-extra - High-level Git commands for dugite",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "dugite",
         "git",
@@ -77,8 +71,6 @@ orgs.newOrg('eclipse-theia') {
       has_issues: false,
       has_wiki: false,
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -99,8 +91,6 @@ orgs.newOrg('eclipse-theia') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "A Yeoman generator for extensions to the Theia IDE",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "theia-extension",
         "theia-ide",
@@ -126,8 +116,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "audit",
         "eclipse-theia",
@@ -153,8 +141,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "http://theia-ide.org",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "cloud-ide",
         "editor",
@@ -242,8 +228,6 @@ orgs.newOrg('eclipse-theia') {
       delete_branch_on_merge: false,
       description: "The Eclipse IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the Theia platform. The Theia IDE is available as a downloadable desktop application. You can also try the latest version of the Theia IDE online. For more details, see the Readme below.",
       homepage: "https://theia-ide.org/#theiaide",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -266,8 +250,6 @@ orgs.newOrg('eclipse-theia') {
       delete_branch_on_merge: false,
       description: "Theia CPP extension",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -295,8 +277,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -314,8 +294,6 @@ orgs.newOrg('eclipse-theia') {
       archived: true,
       default_branch: "master",
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -326,8 +304,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "theia-playwright-template",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -337,8 +313,6 @@ orgs.newOrg('eclipse-theia') {
       archived: true,
       default_branch: "master",
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -363,8 +337,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -379,8 +351,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_build_type: "workflow",
       has_discussions: true,
       homepage: "https://theia-ide.org/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -453,8 +423,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -464,8 +432,6 @@ orgs.newOrg('eclipse-theia') {
       archived: true,
       default_branch: "master",
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -492,8 +458,6 @@ orgs.newOrg('eclipse-theia') {
       delete_branch_on_merge: false,
       description: "Built-in VS Code extensions for Theia",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -532,8 +496,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
