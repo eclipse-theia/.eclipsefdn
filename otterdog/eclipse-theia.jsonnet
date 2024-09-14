@@ -244,6 +244,59 @@ orgs.newOrg('eclipse-theia') {
         },
       ],
     },
+    orgs.newRepo('theia-cloud') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      has_discussions: true,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('DOCKERHUB_TOKEN') {
+          value: "********",
+        },
+        orgs.newRepoSecret('DOCKERHUB_USERNAME') {
+          value: "********",
+        },
+        orgs.newRepoSecret('GCP_SA_KEY') {
+          value: "********",
+        },
+        orgs.newRepoSecret('NPM_TOKEN') {
+          value: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 0,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
+    orgs.newRepo('theia-cloud-helm') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
     orgs.newRepo('theia-cpp-extensions') {
       allow_update_branch: false,
       default_branch: "master",
@@ -291,9 +344,15 @@ orgs.newOrg('eclipse-theia') {
       ],
     },
     orgs.newRepo('theia-generator-plugin') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
+      code_scanning_default_setup_enabled: true,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -310,9 +369,14 @@ orgs.newOrg('eclipse-theia') {
       },
     },
     orgs.newRepo('theia-plugin-packager') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -429,9 +493,14 @@ orgs.newOrg('eclipse-theia') {
       },
     },
     orgs.newRepo('theia-yeoman-plugin') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
