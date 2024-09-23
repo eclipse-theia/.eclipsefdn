@@ -358,6 +358,18 @@ orgs.newOrg('eclipse-theia') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('theia-ide-snap') {
+      allow_squash_merge: false,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      description: "Snap Package for the Theia IDE.",
+      homepage: "https://theia-ide.org/#theiaide",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('theia-playwright-template') {
       allow_merge_commit: true,
       allow_update_branch: false,
