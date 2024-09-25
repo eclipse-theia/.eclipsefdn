@@ -249,8 +249,6 @@ orgs.newOrg('eclipse-theia') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('DOCKERHUB_TOKEN') {
@@ -282,8 +280,6 @@ orgs.newOrg('eclipse-theia') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
