@@ -456,13 +456,13 @@ orgs.newOrg('eclipse-theia') {
       ],
       secrets: [
         orgs.newRepoSecret('DEPLOY_PREVIEW_TOKEN') {
-          value: "********",
+          value: "pass:bots/ecd.theia/github.com/preview-token",
         },
         orgs.newRepoSecret('GH_ACTION_TOKEN') {
           value: "********",
         },
         orgs.newRepoSecret('TOKEN') {
-          value: "********",
+          value: "pass:bots/ecd.theia/github.com/api-token-website",
         },
       ],
       environments: [
