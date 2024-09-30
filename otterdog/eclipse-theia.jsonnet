@@ -365,6 +365,11 @@ orgs.newOrg('eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('STORE_LOGIN') {
+          value: "********",
+        },
+      ],
     },
     orgs.newRepo('theia-playwright-template') {
       allow_merge_commit: true,
@@ -451,13 +456,13 @@ orgs.newOrg('eclipse-theia') {
       ],
       secrets: [
         orgs.newRepoSecret('DEPLOY_PREVIEW_TOKEN') {
-          value: "pass:bots/ecd.theia/github.com/preview-token",
+          value: "********",
         },
         orgs.newRepoSecret('GH_ACTION_TOKEN') {
           value: "********",
         },
         orgs.newRepoSecret('TOKEN') {
-          value: "pass:bots/ecd.theia/github.com/api-token-website",
+          value: "********",
         },
       ],
       environments: [
