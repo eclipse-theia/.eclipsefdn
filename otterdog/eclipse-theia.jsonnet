@@ -221,7 +221,8 @@ orgs.newOrg('eclipse-theia') {
         orgs.newEnvironment('github-pages'),
       ],
     },
-    orgs.newRepo('theia-blueprint') {
+    orgs.newRepo('theia-ide') {
+      aliases: ['theia-blueprint'],
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
