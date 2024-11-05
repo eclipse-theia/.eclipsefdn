@@ -221,30 +221,6 @@ orgs.newOrg('eclipse-theia') {
         orgs.newEnvironment('github-pages'),
       ],
     },
-    orgs.newRepo('theia-ide') {
-      aliases: ['theia-blueprint'],
-      allow_squash_merge: false,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      description: "The Eclipse IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the Theia platform. The Theia IDE is available as a downloadable desktop application. You can also try the latest version of the Theia IDE online. For more details, see the Readme below.",
-      homepage: "https://theia-ide.org/#theiaide",
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      secrets: [
-        orgs.newRepoSecret('DASH_LICENSES_PAT') {
-          value: "********",
-        },
-        orgs.newRepoSecret('DOCKERHUB_TOKEN') {
-          value: "********",
-        },
-        orgs.newRepoSecret('DOCKERHUB_USERNAME') {
-          value: "********",
-        },
-      ],
-    },
     orgs.newRepo('theia-cloud') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -252,6 +228,9 @@ orgs.newOrg('eclipse-theia') {
       has_discussions: true,
       web_commit_signoff_required: false,
       secrets: [
+        orgs.newRepoSecret('DASH_LICENSES_PAT') {
+          value: "********",
+        },
         orgs.newRepoSecret('DOCKERHUB_TOKEN') {
           value: "********",
         },
@@ -354,6 +333,29 @@ orgs.newOrg('eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+    },
+    orgs.newRepo('theia-ide') {
+      allow_squash_merge: false,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      description: "The Eclipse IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the Theia platform. The Theia IDE is available as a downloadable desktop application. You can also try the latest version of the Theia IDE online. For more details, see the Readme below.",
+      homepage: "https://theia-ide.org/#theiaide",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      secrets: [
+        orgs.newRepoSecret('DASH_LICENSES_PAT') {
+          value: "********",
+        },
+        orgs.newRepoSecret('DOCKERHUB_TOKEN') {
+          value: "********",
+        },
+        orgs.newRepoSecret('DOCKERHUB_USERNAME') {
+          value: "********",
+        },
+      ],
     },
     orgs.newRepo('theia-ide-snap') {
       allow_squash_merge: false,
