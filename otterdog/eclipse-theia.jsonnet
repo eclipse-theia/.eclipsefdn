@@ -274,20 +274,16 @@ orgs.newOrg('eclipse-theia') {
       ],
     },
     orgs.newRepo('theia-cpp-extensions') {
+      archived: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      description: "Theia CPP extension",
+      description: "This repository is outdated and has been archived. Please see https://github.com/eclipse-cdt-cloud/vscode-memory-inspector for an updated version of the memory view component",
       homepage: "",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('NPM_AUTH_TOKEN') {
-          value: "********",
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           is_admin_enforced: true,
