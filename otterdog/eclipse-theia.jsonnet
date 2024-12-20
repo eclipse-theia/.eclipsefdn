@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-theia') {
+orgs.newOrg('ecd.theia', 'eclipse-theia') {
   settings+: {
     description: "",
     name: "Eclipse Theia™",
