@@ -9,7 +9,63 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_workflow_permissions: "write",
     },
   },
+  teams+: [
+    orgs.newTeam('core') {
+      description: "https://projects.eclipse.org/projects/ecd.theia/who - responsible for maintaining Theia, i.e. reviewing and landing pull requests, helping community, resolving blockers (as CQs) and so on.",
+      members+: [
+        "AlexTugarev",
+        "akosyakov",
+        "azatsarynnyy",
+        "benoitf",
+        "evidolob",
+        "gorkem",
+        "marcdumais-work",
+        "msujew",
+        "paul-marechal",
+        "svenefftinge",
+        "tolusha",
+        "tsmaeder",
+        "vince-fugnitto",
+        "vinokurig"
+      ],
+    },
+    orgs.newTeam('debug-extension') {
+      description: "Committers responsible for debug extensions",
+      members+: [
+        "akosyakov"
+      ],
+    },
+    orgs.newTeam('ip-help') {
+      description: "Internal team that can help with IP questions, CQs",
+      members+: [
+        "akosyakov",
+        "benoitf",
+        "marcdumais-work",
+        "tolusha",
+        "vince-fugnitto"
+      ],
+    },
+    orgs.newTeam('plugin-system') {
+      description: "Committers responsible for the plugin system",
+      members+: [
+        "akosyakov",
+        "benoitf",
+        "evidolob",
+        "tsmaeder"
+      ],
+    },
+    orgs.newTeam('task-extension') {
+      description: "Committers responsible for task and process extensions",
+      members+: [
+        "akosyakov",
+        "marcdumais-work",
+        "paul-marechal"
+      ],
+    },
+  ],
   _repositories+:: [
+    orgs.newRepo('.github') {
+    },
     orgs.newRepo('cryptodetector') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -274,8 +330,8 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       ],
     },
     orgs.newRepo('theia-cpp-extensions') {
-      archived: true,
       allow_update_branch: false,
+      archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "This repository is outdated and has been archived. Please see https://github.com/eclipse-cdt-cloud/vscode-memory-inspector for an updated version of the memory view component",
@@ -323,8 +379,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -387,8 +441,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -511,8 +563,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -612,10 +662,5 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         orgs.newEnvironment('github-pages'),
       ],
     },
-  ],
-} + {
-  # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
-  _repositories+:: [
-    orgs.newRepo('.github')
   ],
 }
