@@ -302,7 +302,8 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: 0,
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
@@ -320,6 +321,14 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
