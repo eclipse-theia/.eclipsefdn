@@ -610,7 +610,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "********",
         },
         orgs.newRepoSecret('OVSX_PAT') {
-          value: "********",
+          value: "pass:bots/ecd.theia/open-vsx/token",
         },
       ],
       branch_protection_rules: [
