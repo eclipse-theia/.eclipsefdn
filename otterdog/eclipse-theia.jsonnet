@@ -429,7 +429,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       },
       secrets: [
         orgs.newRepoSecret('STORE_LOGIN') {
-          value: "********",
+          value: "pass:bots/ecd.theia/snapcraft.io/STORE_LOGIN",
         },
       ],
     },
