@@ -253,9 +253,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         orgs.newBranchProtectionRule('master') {
           is_admin_enforced: true,
           required_approving_review_count: 1,
-          required_status_checks+: [
-            "Lint"
-          ],
         },
         orgs.newBranchProtectionRule('che-7.0.0') {
           required_approving_review_count: 1,
