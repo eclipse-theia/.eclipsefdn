@@ -239,13 +239,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         },
       ],
       secrets: [
-        orgs.newRepoSecret('DASH_LICENSES_PAT') {
-          value: "********",
-        },
         orgs.newRepoSecret('DEEPL_API_TOKEN') {
-          value: "********",
-        },
-        orgs.newRepoSecret('NPM_AUTH_TOKEN') {
           value: "********",
         },
       ],
@@ -402,9 +396,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         default_workflow_permissions: "write",
       },
       secrets: [
-        orgs.newRepoSecret('DASH_LICENSES_PAT') {
-          value: "********",
-        },
         orgs.newRepoSecret('DOCKERHUB_TOKEN') {
           value: "********",
         },
