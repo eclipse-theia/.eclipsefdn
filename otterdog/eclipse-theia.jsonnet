@@ -69,7 +69,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('cryptodetector') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "cryptodetector",
       web_commit_signoff_required: false,
       workflows+: {
@@ -79,7 +79,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('discourse-forum-archive') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       has_discussions: true,
       web_commit_signoff_required: false,
       workflows+: {
@@ -90,7 +90,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "dugite-extra - High-level Git commands for dugite",
       homepage: "",
@@ -121,7 +121,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('dugite-no-gpl') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_alerts_enabled: false,
       description: "Elegant bindings for working with Git in your Node applications",
       has_issues: false,
@@ -144,7 +144,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "A Yeoman generator for extensions to the Theia IDE",
       topics+: [
@@ -190,7 +190,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia') {
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript.",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
@@ -239,13 +239,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         },
       ],
       secrets: [
-        orgs.newRepoSecret('DASH_LICENSES_PAT') {
-          value: "********",
-        },
         orgs.newRepoSecret('DEEPL_API_TOKEN') {
-          value: "********",
-        },
-        orgs.newRepoSecret('NPM_AUTH_TOKEN') {
           value: "********",
         },
       ],
@@ -277,7 +271,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia-cloud') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       has_discussions: true,
       web_commit_signoff_required: false,
       secrets: [
@@ -309,7 +303,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia-cloud-helm') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_alerts_enabled: false,
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
@@ -339,7 +333,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_update_branch: false,
       archived: true,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "This repository is outdated and has been archived. Please see https://github.com/eclipse-cdt-cloud/vscode-memory-inspector for an updated version of the memory view component",
       homepage: "",
       web_commit_signoff_required: false,
@@ -358,7 +352,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia-e2e-test-suite') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "theia-e2e-test-suite ",
       gh_pages_build_type: "legacy",
@@ -383,7 +377,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       archived: true,
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
@@ -394,7 +388,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "The Eclipse IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the Theia platform. The Theia IDE is available as a downloadable desktop application. You can also try the latest version of the Theia IDE online. For more details, see the Readme below.",
       homepage: "https://theia-ide.org/#theiaide",
       web_commit_signoff_required: false,
@@ -402,9 +396,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
         default_workflow_permissions: "write",
       },
       secrets: [
-        orgs.newRepoSecret('DASH_LICENSES_PAT') {
-          value: "********",
-        },
         orgs.newRepoSecret('DOCKERHUB_TOKEN') {
           value: "********",
         },
@@ -417,7 +408,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Snap Package for the Theia IDE.",
       homepage: "https://theia-ide.org/#theiaide",
       web_commit_signoff_required: false,
@@ -433,7 +424,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia-playwright-template') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "theia-playwright-template",
       web_commit_signoff_required: false,
       workflows+: {
@@ -445,7 +436,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_update_branch: false,
       archived: true,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
@@ -469,7 +460,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('theia-vscodecov') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
@@ -480,7 +471,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Theia's Website",
       gh_pages_build_type: "workflow",
       has_discussions: true,
@@ -556,7 +547,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -567,7 +558,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_update_branch: false,
       archived: true,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
@@ -592,7 +583,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Built-in VS Code extensions for Theia",
       homepage: "",
       web_commit_signoff_required: false,
@@ -628,7 +619,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     orgs.newRepo('vscode-theia-comparator') {
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
