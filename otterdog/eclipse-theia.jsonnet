@@ -239,35 +239,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/5cc039a06ed44dc5') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team",
-            "team_add"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://jenkins.openshift.io/github-webhook/') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "pull_request",
-            "push"
-          ],
-          insecure_ssl: "1",
-          secret: "********",
-        },
-      ],
       secrets: [
         orgs.newRepoSecret('DEEPL_API_TOKEN') {
           value: "********",
@@ -700,20 +671,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       secrets: [
         orgs.newRepoSecret('TOKEN') {
           value: "********",
