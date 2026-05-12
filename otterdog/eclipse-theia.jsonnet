@@ -222,9 +222,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: true,
       description: "Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript.",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       has_discussions: true,
       homepage: "http://theia-ide.org",
       topics+: [
@@ -356,9 +354,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "theia-e2e-test-suite ",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -664,9 +660,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
