@@ -266,6 +266,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('copilot'),
       ],
     },
     orgs.newRepo('theia-cloud') {
@@ -288,6 +289,9 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "********",
         },
         orgs.newRepoSecret('NPM_TOKEN') {
+          value: "********",
+        },
+        orgs.newRepoSecret('REDHAT_PULL_SECRET') {
           value: "********",
         },
       ],
@@ -400,6 +404,9 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "********",
         },
         orgs.newRepoSecret('DOCKERHUB_USERNAME') {
+          value: "********",
+        },
+        orgs.newRepoSecret('DASH_LICENSES_PAT') {
           value: "********",
         },
       ],
