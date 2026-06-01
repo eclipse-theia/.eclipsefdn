@@ -75,6 +75,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('discourse-forum-archive') {
       allow_merge_commit: true,
@@ -85,6 +91,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('dugite-extra') {
       allow_merge_commit: true,
@@ -115,6 +127,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
             "push",
             "repository"
           ],
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
         },
       ],
     },
@@ -161,6 +179,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "********",
         },
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('security-audit') {
       allow_squash_merge: false,
@@ -183,6 +207,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
@@ -192,9 +222,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: true,
       description: "Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript.",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       has_discussions: true,
       homepage: "http://theia-ide.org",
       topics+: [
@@ -209,35 +237,6 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/5cc039a06ed44dc5') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team",
-            "team_add"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://jenkins.openshift.io/github-webhook/') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "pull_request",
-            "push"
-          ],
-          insecure_ssl: "1",
-          secret: "********",
-        },
-      ],
       secrets: [
         orgs.newRepoSecret('DEEPL_API_TOKEN') {
           value: "********",
@@ -359,9 +358,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "theia-e2e-test-suite ",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -369,6 +366,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       secrets: [
         orgs.newRepoSecret('TOKEN') {
           value: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
         },
       ],
       environments: [
@@ -410,6 +413,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "********",
         },
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('theia-ide-snap') {
       allow_squash_merge: false,
@@ -427,6 +436,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "pass:bots/ecd.theia/snapcraft.io/STORE_LOGIN",
         },
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('theia-playwright-template') {
       allow_merge_commit: true,
@@ -437,6 +452,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('theia-plugin-packager') {
       allow_merge_commit: true,
@@ -473,6 +494,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('theia-website') {
       allow_merge_commit: true,
@@ -520,6 +547,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
           value: "pass:bots/ecd.theia/github.com/api-token-website",
         },
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -559,6 +592,12 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       workflows+: {
         enabled: false,
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+        },
+      ],
     },
     orgs.newRepo('theia-yeoman-plugin') {
       allow_merge_commit: true,
@@ -628,27 +667,11 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       default_branch: "master",
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       secrets: [
         orgs.newRepoSecret('TOKEN') {
           value: "********",
@@ -656,6 +679,7 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
+          is_admin_enforced: true,
           required_approving_review_count: 1,
           requires_code_owner_reviews: true,
           requires_status_checks: false,
