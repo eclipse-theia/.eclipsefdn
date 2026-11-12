@@ -10,56 +10,11 @@ orgs.newOrg('ecd.theia', 'eclipse-theia') {
     },
   },
   teams+: [
-    orgs.newTeam('core') {
-      description: "https://projects.eclipse.org/projects/ecd.theia/who - responsible for maintaining Theia, i.e. reviewing and landing pull requests, helping community, resolving blockers (as CQs) and so on.",
+    orgs.newTeam('pr-stewards') {
+      description: "Committers who take care of pull requests and move them through the review flow, see https://github.com/eclipse-theia/theia/blob/master/doc/pull-requests.md",
       members+: [
-        "AlexTugarev",
-        "akosyakov",
-        "azatsarynnyy",
-        "benoitf",
-        "evidolob",
-        "gorkem",
-        "marcdumais-work",
-        "msujew",
-        "paul-marechal",
-        "svenefftinge",
-        "tolusha",
-        "tsmaeder",
-        "vince-fugnitto",
-        "vinokurig"
-      ],
-    },
-    orgs.newTeam('debug-extension') {
-      description: "Committers responsible for debug extensions",
-      members+: [
-        "akosyakov"
-      ],
-    },
-    orgs.newTeam('ip-help') {
-      description: "Internal team that can help with IP questions, CQs",
-      members+: [
-        "akosyakov",
-        "benoitf",
-        "marcdumais-work",
-        "tolusha",
-        "vince-fugnitto"
-      ],
-    },
-    orgs.newTeam('plugin-system') {
-      description: "Committers responsible for the plugin system",
-      members+: [
-        "akosyakov",
-        "benoitf",
-        "evidolob",
-        "tsmaeder"
-      ],
-    },
-    orgs.newTeam('task-extension') {
-      description: "Committers responsible for task and process extensions",
-      members+: [
-        "akosyakov",
-        "marcdumais-work",
-        "paul-marechal"
+        "ndoschek",
+        "sdirix"
       ],
     },
   ],
